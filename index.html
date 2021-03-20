@@ -11,29 +11,29 @@
     <!-- MY CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <title>My Portfolio | RIZAL FAUZI</title>
+    <title>Technology Student Community</title>
   </head>
   <body id="home" class="main">
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">RIZAL FAUZI</a>
+        <a class="navbar-brand" href="#">TSC</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link active" href="#about">Tentang</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#about">About</a>
+              <a class="nav-link active" href="#projects">Poster</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#projects">Project</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#contact">Contact</a>
+              <a class="nav-link active" href="#contact">Pendaftaran</a>
             </li>
           </ul>
         </div>
@@ -43,9 +43,9 @@
 
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
-      <img src="img/default.jpg" alt="Rizal Fauzi" width="200" height="240" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4">RIZAL FAUZI</h1>
-      <p class="lead">Student | Programmer</p>
+      <img src="img/TSC-removebg.png" alt="Rizal Fauzi" width="500" height="440" />
+      <!-- <h1 class="display-4">Technology Student Community</h1> -->
+      <!-- <p class="lead">Student | Programmer</p> -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -59,9 +59,9 @@
     <!-- About -->
     <section id="about">
       <div class="container">
-        <div class="row text-center mb-3">
+        <div class="row text-center mb-4">
           <div class="col">
-            <h2>About Me</h2>
+            <h1>Tentang</h1>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
@@ -86,52 +86,28 @@
     <!-- Projects -->
     <section id="projects">
       <div class="container">
-        <div class="row text-center mb-3">
+        <div class="row text-center mb-4">
           <div class="col">
-            <h2>My Projects</h2>
+            <h1>Poster</h1>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4 mb-3">
+        <div class="row justify-content-center">
+          <div class="col-md-10 mb-3">
             <div class="card">
-              <img src="img/projects/1.jpg" class="card-img-top" alt="projects 1" />
-              <div class="card-body">
+              <img src="img/projects/Poster-Excel.jpg" class="card-img-top" alt="projects 1" />
+              <!-- <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
+              </div> -->
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <!-- <div class="col-md-4 mb-3">
             <div class="card">
               <img src="img/projects/2.jpg" class="card-img-top" alt="projects 2" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/projects/3.jpg" class="card-img-top" alt="projects 3" />
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/projects/4.jpg" class="card-img-top" alt="projects 4" />
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/projects/5.jpg" class="card-img-top" alt="projects 5" />
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -147,9 +123,9 @@
     <!-- Contact -->
     <section id="contact">
       <div class="container">
-        <div class="row text-center mb-3">
+        <div class="row text-center mb-4">
           <div class="col">
-            <h2>Contact Me</h2>
+            <h2>Pendaftaran</h2>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -159,20 +135,24 @@
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
 
-            <form name="rizal-contact-me">
+            <form name="DATA-TSC">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
                 <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" required />
+              </div>
+              <div class="mb-3">
+                <label for="nowa" class="form-label">No Whatsapp (wa)</label>
+                <input type="text" class="form-control" id="nowa" aria-describedby="nowa" name="nowa" required />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" required />
               </div>
               <div class="mb-3">
-                <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3" name="pesan" required></textarea>
+                <label for="asal" class="form-label">Asal Daerah</label>
+                <input type="text" class="form-control" id="asal" aria-describedby="asal" name="asal" required />
               </div>
-              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+              <button type="submit" class="btn btn-primary btn-kirim">Daftar</button>
 
               <button class="btn btn-primary btn-loading d-none" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -194,7 +174,7 @@
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center pb-1">
-      <p>Created with <span class="heart">❤</span> by <a href="#" class="text-white fw-bold" style="text-decoration: none">RIZAL FAUZI</a></p>
+      <p>Created with <span class="heart">❤</span> by <a href="#" class="text-white" style="text-decoration: none">ICT TSC</a></p>
     </footer>
     <!-- End Footer -->
 
@@ -233,8 +213,8 @@
     </script>
 
     <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbzMFerLsHjSbpwzLhFrj7G7AgM6zFcP_CkRMym7jh7kdRYCLYpImJr750hIHMGI6Mco1g/exec";
-      const form = document.forms["rizal-contact-me"];
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwA5hbCufUrB9yQXY4ts1hXBWeZvKYhpi-N19VBju5sgCWKX95ZeYh-KErNWgBTRqK4/exec";
+      const form = document.forms["DATA-TSC"];
       const btnKirim = document.querySelector(".btn-kirim");
       const btnLoading = document.querySelector(".btn-loading");
       const myAlert = document.querySelector(".my-alert");
