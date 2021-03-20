@@ -30,7 +30,7 @@
               <a class="nav-link active" href="#tentang">Tentang</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#poster">Poster</a>
+              <a class="nav-link active" href="#projects">Poster</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="#pendaftaran">Pendaftaran</a>
@@ -46,7 +46,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-6 mb-3">
-            <img src="img/TSC-removebg.png" class="card-img-top" alt="projects 1" />
+            <img src="img/TSC-removebg.png" class="card-img-top" alt="logo tsc" />
           </div>
         </div>
       </div>
@@ -89,8 +89,8 @@
     </section>
     <!-- End About -->
 
-    <!-- Projects -->
-    <section id="poster">
+    <!-- poster -->
+    <section id="projects">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
@@ -100,7 +100,7 @@
         <div class="row justify-content-center">
           <div class="col-md-10 mb-3">
             <div class="card">
-              <img src="img/projects/Poster-Excel.jpg" class="card-img-top" alt="projects 1" />
+              <img src="img/poster/Poster-Excel.jpg" class="card-img-top" alt="poster 1" />
               <!-- <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div> -->
@@ -108,7 +108,7 @@
           </div>
           <!-- <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/projects/2.jpg" class="card-img-top" alt="projects 2" />
+              <img src="img/poster/2.jpg" class="card-img-top" alt="poster 2" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
@@ -137,7 +137,7 @@
         <div class="row justify-content-center">
           <div class="col-md-6">
             <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-              <strong>Terima Kasih!</strong> Pesan anda sudah terkirim.
+              <strong>Berhasil Mendaftar!</strong> Silahkan Join Grup Whatsapp.
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
 
@@ -180,7 +180,7 @@
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center pb-1">
-      <p>Created with <span class="heart">❤</span> by <a href="https://tscweb.github.io/" class="text-white" style="text-decoration: none">ICT TSC</a></p>
+      <p>Created with <span class="heart">❤</span> by <a href="https://tscweb.github.io/" class="text-white" style="text-decoration: none">ICT TSC | 2021</a></p>
     </footer>
     <!-- End Footer -->
 
@@ -240,7 +240,7 @@
             myAlert.classList.toggle("d-none");
             // Reset Form jadi Kosong setelah terkirim
             form.reset();
-            window.open("link.html", "_blank");
+            window.location.href = "link.html";
             console.log("Success!", response);
           })
           .catch((error) => console.error("Error!", error.message));
