@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Technology Student Community</title>
+  </head>
+  <body id="home" class="main">
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">TSC</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link active" href="#poster">Poster</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#pendaftaran">Pendaftaran</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Nav -->
+
+    <!-- Jumbotron -->
+    <section class="jumbotron text-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 mb-3">
+            <p>Diwajibkan bagi seluruh peserta yang sudah mendaftar untuk masuk ke dalam Grup Whatsapp agar bisa mengetahui informasi selanjutnya.</p>
+            <p><a href="#">LINK GRUP WHATSAPP</a></p>
+          </div>
+        </div>
+      </div>
+      <!-- <h1 class="display-4">Technology Student Community</h1> -->
+      <!-- <p class="lead">Student | Programmer</p> -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,32L48,53.3C96,75,192,117,288,117.3C384,117,480,75,576,96C672,117,768,203,864,213.3C960,224,1056,160,1152,122.7C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- End Jumbo -->
+
+    <!-- Footer -->
+    <!-- <footer class="bg-primary text-white text-center pb-1">
+      <p>Created with <span class="heart">❤</span> by <a href="https://tscweb.github.io/" class="text-white" style="text-decoration: none">ICT TSC</a></p>
+    </footer> -->
+    <!-- End Footer -->
+
+    <!-- Boostrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body, section").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              1000,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
+
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwA5hbCufUrB9yQXY4ts1hXBWeZvKYhpi-N19VBju5sgCWKX95ZeYh-KErNWgBTRqK4/exec";
+      const form = document.forms["DATA-TSC"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // Ketika tombol submit di klik
+        // Selama belum succes, tampilkan tombol loading. Hilangkan kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // Setelah succes, tampilkan tombol Kirim. Hilangkan loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            // Menampilkan Alert Succes
+            myAlert.classList.toggle("d-none");
+            // Reset Form jadi Kosong setelah terkirim
+            form.reset();
+            window.open("link.html", "_blank");
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>

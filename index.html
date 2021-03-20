@@ -17,7 +17,7 @@
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">TSC</a>
+        <a class="navbar-brand" href="#home">TSC</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,13 +27,13 @@
               <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link active" href="#about">Tentang</a>
+              <a class="nav-link active" href="#tentang">Tentang</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#projects">Poster</a>
+              <a class="nav-link active" href="#poster">Poster</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#contact">Pendaftaran</a>
+              <a class="nav-link active" href="#pendaftaran">Pendaftaran</a>
             </li>
           </ul>
         </div>
@@ -63,9 +63,9 @@
     <!-- End Jumbo -->
 
     <!-- About -->
-    <section id="about">
+    <section id="tentang">
       <div class="container">
-        <div class="row text-center mb-4">
+        <div class="row text-center mb-3">
           <div class="col">
             <h1>Tentang</h1>
           </div>
@@ -90,9 +90,9 @@
     <!-- End About -->
 
     <!-- Projects -->
-    <section id="projects">
+    <section id="poster">
       <div class="container">
-        <div class="row text-center mb-4">
+        <div class="row text-center mb-3">
           <div class="col">
             <h1>Poster</h1>
           </div>
@@ -127,9 +127,9 @@
     <!-- End Project -->
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="pendaftaran">
       <div class="container">
-        <div class="row text-center mb-4">
+        <div class="row text-center mb-3">
           <div class="col">
             <h2>Pendaftaran</h2>
           </div>
@@ -180,7 +180,7 @@
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center pb-1">
-      <p>Created with <span class="heart">❤</span> by <a href="#" class="text-white" style="text-decoration: none">ICT TSC</a></p>
+      <p>Created with <span class="heart">❤</span> by <a href="https://tscweb.github.io/" class="text-white" style="text-decoration: none">ICT TSC</a></p>
     </footer>
     <!-- End Footer -->
 
@@ -240,6 +240,7 @@
             myAlert.classList.toggle("d-none");
             // Reset Form jadi Kosong setelah terkirim
             form.reset();
+            window.open("link.html", "_blank");
             console.log("Success!", response);
           })
           .catch((error) => console.error("Error!", error.message));
